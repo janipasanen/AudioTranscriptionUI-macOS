@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39BD21402CC2AF3B0077FD78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD213F2CC2AF3B0077FD78 /* AppDelegate.swift */; };
+		39BD21422CC2AF3B0077FD78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD21412CC2AF3B0077FD78 /* ContentView.swift */; };
+		39BD21442CC2AF3D0077FD78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39BD21432CC2AF3D0077FD78 /* Assets.xcassets */; };
+		39BD21472CC2AF3D0077FD78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39BD21462CC2AF3D0077FD78 /* Preview Assets.xcassets */; };
+		39BD214A2CC2AF3D0077FD78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BD21482CC2AF3D0077FD78 /* Main.storyboard */; };
+		39BD21562CC2AF3D0077FD78 /* Audio_Transcription_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD21552CC2AF3D0077FD78 /* Audio_Transcription_AppTests.swift */; };
+		39BD21612CC2AF3D0077FD78 /* Audio_Transcription_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD21602CC2AF3D0077FD78 /* Audio_Transcription_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		39BD21522CC2AF3D0077FD78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39BD21342CC2AF3B0077FD78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39BD213B2CC2AF3B0077FD78;
+			remoteInfo = "Audio Transcription App";
+		};
+		39BD215D2CC2AF3D0077FD78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39BD21342CC2AF3B0077FD78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39BD213B2CC2AF3B0077FD78;
+			remoteInfo = "Audio Transcription App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		39BD213C2CC2AF3B0077FD78 /* Audio Transcription App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio Transcription App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39BD213F2CC2AF3B0077FD78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		39BD21412CC2AF3B0077FD78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		39BD21432CC2AF3D0077FD78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		39BD21462CC2AF3D0077FD78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		39BD21492CC2AF3D0077FD78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		39BD214B2CC2AF3D0077FD78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39BD214C2CC2AF3D0077FD78 /* Audio_Transcription_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Audio_Transcription_App.entitlements; sourceTree = "<group>"; };
+		39BD21512CC2AF3D0077FD78 /* Audio Transcription AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio Transcription AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39BD21552CC2AF3D0077FD78 /* Audio_Transcription_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_Transcription_AppTests.swift; sourceTree = "<group>"; };
+		39BD21572CC2AF3D0077FD78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39BD215C2CC2AF3D0077FD78 /* Audio Transcription AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio Transcription AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39BD21602CC2AF3D0077FD78 /* Audio_Transcription_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_Transcription_AppUITests.swift; sourceTree = "<group>"; };
+		39BD21622CC2AF3D0077FD78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39BD21392CC2AF3B0077FD78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39BD214E2CC2AF3D0077FD78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39BD21592CC2AF3D0077FD78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39BD21332CC2AF3B0077FD78 = {
+			isa = PBXGroup;
+			children = (
+				39BD213E2CC2AF3B0077FD78 /* Audio Transcription App */,
+				39BD21542CC2AF3D0077FD78 /* Audio Transcription AppTests */,
+				39BD215F2CC2AF3D0077FD78 /* Audio Transcription AppUITests */,
+				39BD213D2CC2AF3B0077FD78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39BD213D2CC2AF3B0077FD78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39BD213C2CC2AF3B0077FD78 /* Audio Transcription App.app */,
+				39BD21512CC2AF3D0077FD78 /* Audio Transcription AppTests.xctest */,
+				39BD215C2CC2AF3D0077FD78 /* Audio Transcription AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39BD213E2CC2AF3B0077FD78 /* Audio Transcription App */ = {
+			isa = PBXGroup;
+			children = (
+				39BD213F2CC2AF3B0077FD78 /* AppDelegate.swift */,
+				39BD21412CC2AF3B0077FD78 /* ContentView.swift */,
+				39BD21432CC2AF3D0077FD78 /* Assets.xcassets */,
+				39BD21482CC2AF3D0077FD78 /* Main.storyboard */,
+				39BD214B2CC2AF3D0077FD78 /* Info.plist */,
+				39BD214C2CC2AF3D0077FD78 /* Audio_Transcription_App.entitlements */,
+				39BD21452CC2AF3D0077FD78 /* Preview Content */,
+			);
+			path = "Audio Transcription App";
+			sourceTree = "<group>";
+		};
+		39BD21452CC2AF3D0077FD78 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				39BD21462CC2AF3D0077FD78 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		39BD21542CC2AF3D0077FD78 /* Audio Transcription AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				39BD21552CC2AF3D0077FD78 /* Audio_Transcription_AppTests.swift */,
+				39BD21572CC2AF3D0077FD78 /* Info.plist */,
+			);
+			path = "Audio Transcription AppTests";
+			sourceTree = "<group>";
+		};
+		39BD215F2CC2AF3D0077FD78 /* Audio Transcription AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				39BD21602CC2AF3D0077FD78 /* Audio_Transcription_AppUITests.swift */,
+				39BD21622CC2AF3D0077FD78 /* Info.plist */,
+			);
+			path = "Audio Transcription AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39BD213B2CC2AF3B0077FD78 /* Audio Transcription App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39BD21652CC2AF3D0077FD78 /* Build configuration list for PBXNativeTarget "Audio Transcription App" */;
+			buildPhases = (
+				39BD21382CC2AF3B0077FD78 /* Sources */,
+				39BD21392CC2AF3B0077FD78 /* Frameworks */,
+				39BD213A2CC2AF3B0077FD78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Audio Transcription App";
+			productName = "Audio Transcription App";
+			productReference = 39BD213C2CC2AF3B0077FD78 /* Audio Transcription App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		39BD21502CC2AF3D0077FD78 /* Audio Transcription AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39BD21682CC2AF3D0077FD78 /* Build configuration list for PBXNativeTarget "Audio Transcription AppTests" */;
+			buildPhases = (
+				39BD214D2CC2AF3D0077FD78 /* Sources */,
+				39BD214E2CC2AF3D0077FD78 /* Frameworks */,
+				39BD214F2CC2AF3D0077FD78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39BD21532CC2AF3D0077FD78 /* PBXTargetDependency */,
+			);
+			name = "Audio Transcription AppTests";
+			productName = "Audio Transcription AppTests";
+			productReference = 39BD21512CC2AF3D0077FD78 /* Audio Transcription AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		39BD215B2CC2AF3D0077FD78 /* Audio Transcription AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39BD216B2CC2AF3D0077FD78 /* Build configuration list for PBXNativeTarget "Audio Transcription AppUITests" */;
+			buildPhases = (
+				39BD21582CC2AF3D0077FD78 /* Sources */,
+				39BD21592CC2AF3D0077FD78 /* Frameworks */,
+				39BD215A2CC2AF3D0077FD78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39BD215E2CC2AF3D0077FD78 /* PBXTargetDependency */,
+			);
+			name = "Audio Transcription AppUITests";
+			productName = "Audio Transcription AppUITests";
+			productReference = 39BD215C2CC2AF3D0077FD78 /* Audio Transcription AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39BD21342CC2AF3B0077FD78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					39BD213B2CC2AF3B0077FD78 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					39BD21502CC2AF3D0077FD78 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 39BD213B2CC2AF3B0077FD78;
+					};
+					39BD215B2CC2AF3D0077FD78 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 39BD213B2CC2AF3B0077FD78;
+					};
+				};
+			};
+			buildConfigurationList = 39BD21372CC2AF3B0077FD78 /* Build configuration list for PBXProject "Audio Transcription App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 39BD21332CC2AF3B0077FD78;
+			productRefGroup = 39BD213D2CC2AF3B0077FD78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39BD213B2CC2AF3B0077FD78 /* Audio Transcription App */,
+				39BD21502CC2AF3D0077FD78 /* Audio Transcription AppTests */,
+				39BD215B2CC2AF3D0077FD78 /* Audio Transcription AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39BD213A2CC2AF3B0077FD78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39BD214A2CC2AF3D0077FD78 /* Main.storyboard in Resources */,
+				39BD21472CC2AF3D0077FD78 /* Preview Assets.xcassets in Resources */,
+				39BD21442CC2AF3D0077FD78 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39BD214F2CC2AF3D0077FD78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39BD215A2CC2AF3D0077FD78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39BD21382CC2AF3B0077FD78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39BD21422CC2AF3B0077FD78 /* ContentView.swift in Sources */,
+				39BD21402CC2AF3B0077FD78 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39BD214D2CC2AF3D0077FD78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39BD21562CC2AF3D0077FD78 /* Audio_Transcription_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39BD21582CC2AF3D0077FD78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39BD21612CC2AF3D0077FD78 /* Audio_Transcription_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		39BD21532CC2AF3D0077FD78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39BD213B2CC2AF3B0077FD78 /* Audio Transcription App */;
+			targetProxy = 39BD21522CC2AF3D0077FD78 /* PBXContainerItemProxy */;
+		};
+		39BD215E2CC2AF3D0077FD78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39BD213B2CC2AF3B0077FD78 /* Audio Transcription App */;
+			targetProxy = 39BD215D2CC2AF3D0077FD78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		39BD21482CC2AF3D0077FD78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39BD21492CC2AF3D0077FD78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		39BD21632CC2AF3D0077FD78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		39BD21642CC2AF3D0077FD78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		39BD21662CC2AF3D0077FD78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Audio Transcription App/Audio_Transcription_App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Audio Transcription App/Preview Content\"";
+				DEVELOPMENT_TEAM = 65VYCPB2MV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Audio Transcription App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.JMPasanen.Audio-Transcription-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		39BD21672CC2AF3D0077FD78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Audio Transcription App/Audio_Transcription_App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Audio Transcription App/Preview Content\"";
+				DEVELOPMENT_TEAM = 65VYCPB2MV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Audio Transcription App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.JMPasanen.Audio-Transcription-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		39BD21692CC2AF3D0077FD78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65VYCPB2MV;
+				INFOPLIST_FILE = "Audio Transcription AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.JMPasanen.Audio-Transcription-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Audio Transcription App.app/Contents/MacOS/Audio Transcription App";
+			};
+			name = Debug;
+		};
+		39BD216A2CC2AF3D0077FD78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65VYCPB2MV;
+				INFOPLIST_FILE = "Audio Transcription AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.JMPasanen.Audio-Transcription-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Audio Transcription App.app/Contents/MacOS/Audio Transcription App";
+			};
+			name = Release;
+		};
+		39BD216C2CC2AF3D0077FD78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65VYCPB2MV;
+				INFOPLIST_FILE = "Audio Transcription AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.JMPasanen.Audio-Transcription-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Audio Transcription App";
+			};
+			name = Debug;
+		};
+		39BD216D2CC2AF3D0077FD78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65VYCPB2MV;
+				INFOPLIST_FILE = "Audio Transcription AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.JMPasanen.Audio-Transcription-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Audio Transcription App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39BD21372CC2AF3B0077FD78 /* Build configuration list for PBXProject "Audio Transcription App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39BD21632CC2AF3D0077FD78 /* Debug */,
+				39BD21642CC2AF3D0077FD78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39BD21652CC2AF3D0077FD78 /* Build configuration list for PBXNativeTarget "Audio Transcription App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39BD21662CC2AF3D0077FD78 /* Debug */,
+				39BD21672CC2AF3D0077FD78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39BD21682CC2AF3D0077FD78 /* Build configuration list for PBXNativeTarget "Audio Transcription AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39BD21692CC2AF3D0077FD78 /* Debug */,
+				39BD216A2CC2AF3D0077FD78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39BD216B2CC2AF3D0077FD78 /* Build configuration list for PBXNativeTarget "Audio Transcription AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39BD216C2CC2AF3D0077FD78 /* Debug */,
+				39BD216D2CC2AF3D0077FD78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39BD21342CC2AF3B0077FD78 /* Project object */;
+}
