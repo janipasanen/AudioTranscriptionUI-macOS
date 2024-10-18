@@ -14,6 +14,7 @@
 		39BD214A2CC2AF3D0077FD78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BD21482CC2AF3D0077FD78 /* Main.storyboard */; };
 		39BD21562CC2AF3D0077FD78 /* Audio_Transcription_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD21552CC2AF3D0077FD78 /* Audio_Transcription_AppTests.swift */; };
 		39BD21612CC2AF3D0077FD78 /* Audio_Transcription_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD21602CC2AF3D0077FD78 /* Audio_Transcription_AppUITests.swift */; };
+		39BD21792CC2B15F0077FD78 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BD21782CC2B15F0077FD78 /* Speech.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		39BD215C2CC2AF3D0077FD78 /* Audio Transcription AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio Transcription AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BD21602CC2AF3D0077FD78 /* Audio_Transcription_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_Transcription_AppUITests.swift; sourceTree = "<group>"; };
 		39BD21622CC2AF3D0077FD78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39BD21782CC2B15F0077FD78 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BD21792CC2B15F0077FD78 /* Speech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,7 @@
 				39BD21542CC2AF3D0077FD78 /* Audio Transcription AppTests */,
 				39BD215F2CC2AF3D0077FD78 /* Audio Transcription AppUITests */,
 				39BD213D2CC2AF3B0077FD78 /* Products */,
+				39BD21772CC2B15F0077FD78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +137,14 @@
 				39BD21622CC2AF3D0077FD78 /* Info.plist */,
 			);
 			path = "Audio Transcription AppUITests";
+			sourceTree = "<group>";
+		};
+		39BD21772CC2B15F0077FD78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39BD21782CC2B15F0077FD78 /* Speech.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Audio Transcription App/Audio_Transcription_App.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Audio Transcription App/Preview Content\"";
@@ -458,6 +471,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Audio Transcription App/Audio_Transcription_App.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Audio Transcription App/Preview Content\"";
