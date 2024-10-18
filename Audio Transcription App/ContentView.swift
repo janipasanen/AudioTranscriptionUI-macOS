@@ -51,9 +51,11 @@ struct ContentView: View {
         }
         .padding()
         .frame(width: 400, height: 400)
+        /*
         .onAppear {
             requestSpeechRecognitionAuthorization()
         }
+         */
     }
 
     // Function to open a file picker
@@ -72,40 +74,47 @@ struct ContentView: View {
 
     // Function to handle audio transcription
     func transcribeAudio() {
-        requestSpeechRecognitionAuthorization()
         guard let audioURL = selectedFileURL else { return }
         isProcessing = true
-        statusMessage = "Processing transcription..."
+        statusMessage = "Transcribing audio..."
 
-        // Directly transcribe the M4A file without conversion
-        transcribeAudioFile(at: audioURL) { result, error in
+        // Run the shell command to transcribe
+        let task = Process()
+        task.executableURL = URL(fileURLWithPath: "/bin/zsh")
+
+        // Prepare a script to activate the virtual environment, run Whisper, and transcribe
+        let script = """
+        source /path/to/venv/bin/activate
+        whisper '\(audioURL.path)' --language sv --output_format txt --output_dir /path/to/output
+        """
+
+        task.arguments = ["-c", script]
+
+        // Capture the output
+        let pipe = Pipe()
+        task.standardOutput = pipe
+        task.standardError = pipe
+
+        task.terminationHandler = { _ in
+            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            let output = String(data: data, encoding: .utf8) ?? ""
             DispatchQueue.main.async {
-                isProcessing = false
-
-                if let error = error {
-                    statusMessage = "Error: \(error.localizedDescription)"
-                } else if let result = result {
-                    transcriptionText = result
-                    statusMessage = "Transcription complete."
-                }
+                self.isProcessing = false
+                self.transcriptionText = output
+                self.statusMessage = "Transcription complete."
             }
+        }
+
+        do {
+            try task.run()
+        } catch {
+            statusMessage = "Error: \(error.localizedDescription)"
+            isProcessing = false
         }
     }
 
-    // Function to perform transcription
-    func transcribeAudioFile(at url: URL, completion: @escaping (String?, Error?) -> Void) {
-        let recognizer = SFSpeechRecognizer(locale: Locale(identifier: "sv-SE"))!
-        let request = SFSpeechURLRecognitionRequest(url: url)
-
-        recognizer.recognitionTask(with: request) { result, error in
-            if let result = result {
-                completion(result.bestTranscription.formattedString, nil)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
     
+    /*
     // Request authorization for speech recognition
     func requestSpeechRecognitionAuthorization() {
         SFSpeechRecognizer.requestAuthorization { authStatus in
@@ -125,6 +134,7 @@ struct ContentView: View {
             }
         }
     }
+     */
 }
 
 struct ContentView_Previews: PreviewProvider {
