@@ -15,6 +15,7 @@
 		39BD21562CC2AF3D0077FD78 /* Audio_Transcription_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD21552CC2AF3D0077FD78 /* Audio_Transcription_AppTests.swift */; };
 		39BD21612CC2AF3D0077FD78 /* Audio_Transcription_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD21602CC2AF3D0077FD78 /* Audio_Transcription_AppUITests.swift */; };
 		39BD21792CC2B15F0077FD78 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BD21782CC2B15F0077FD78 /* Speech.framework */; };
+		39C695FA2CC466AE00DAEC73 /* TranscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C695F92CC466AE00DAEC73 /* TranscriptionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		39BD21622CC2AF3D0077FD78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39BD21782CC2B15F0077FD78 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		39C695EF2CC4465000DAEC73 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		39C695F92CC466AE00DAEC73 /* TranscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				39BD213F2CC2AF3B0077FD78 /* AppDelegate.swift */,
 				39BD21412CC2AF3B0077FD78 /* ContentView.swift */,
+				39C695F92CC466AE00DAEC73 /* TranscriptionManager.swift */,
 				39BD21432CC2AF3D0077FD78 /* Assets.xcassets */,
 				39BD21482CC2AF3D0077FD78 /* Main.storyboard */,
 				39BD214B2CC2AF3D0077FD78 /* Info.plist */,
@@ -281,6 +284,7 @@
 			files = (
 				39BD21422CC2AF3B0077FD78 /* ContentView.swift in Sources */,
 				39BD21402CC2AF3B0077FD78 /* AppDelegate.swift in Sources */,
+				39C695FA2CC466AE00DAEC73 /* TranscriptionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
