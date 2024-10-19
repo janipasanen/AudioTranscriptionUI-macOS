@@ -108,17 +108,15 @@ struct ContentView: View {
 
         // Update the Whisper script to specify the output directory and format
         let script = """
-        /usr/local/bin/stdbuf -oL /opt/anaconda3/bin/whisper '\(audioURL.path)' --language sv --output_format txt --output_dir '\(outputDirectory.path)'
+        /opt/anaconda3/bin/whisper '\(audioURL.path)' --language sv --output_format txt --output_dir '\(outputDirectory.path)'
         """
 
         task.arguments = ["-c", script]
 
         // Capture both stdout and stderr outputs from Whisper
-        let stdoutPipe = Pipe()
-        //let stderrPipe = Pipe()
-        task.standardOutput = stdoutPipe
-        //task.standardError = stderrPipe
-        task.standardError = stdoutPipe  // Redirect stderr to the same pipe
+        let pipe = Pipe()
+        task.standardOutput = pipe
+        task.standardError = pipe
 
         // Function to read pipe data continuously
         func readPipe(pipe: Pipe, appendTo outputField: @escaping (String) -> Void) {
