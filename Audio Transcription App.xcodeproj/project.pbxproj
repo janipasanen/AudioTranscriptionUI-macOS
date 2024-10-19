@@ -50,6 +50,7 @@
 		39BD21602CC2AF3D0077FD78 /* Audio_Transcription_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_Transcription_AppUITests.swift; sourceTree = "<group>"; };
 		39BD21622CC2AF3D0077FD78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39BD21782CC2B15F0077FD78 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		39C695EF2CC4465000DAEC73 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		39BD21332CC2AF3B0077FD78 = {
 			isa = PBXGroup;
 			children = (
+				39C695EF2CC4465000DAEC73 /* README.md */,
 				39BD213E2CC2AF3B0077FD78 /* Audio Transcription App */,
 				39BD21542CC2AF3D0077FD78 /* Audio Transcription AppTests */,
 				39BD215F2CC2AF3D0077FD78 /* Audio Transcription AppUITests */,
