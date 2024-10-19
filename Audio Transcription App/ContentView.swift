@@ -78,48 +78,47 @@ struct ContentView: View {
         isProcessing = true
         statusMessage = "Transcribing audio..."
 
+        // Set a path for the transcription output file
+        let outputDirectory = FileManager.default.temporaryDirectory
+        let outputFilePath = outputDirectory.appendingPathComponent("transcription.txt")
+        
         // Run the shell command to transcribe
         let task = Process()
         task.executableURL = URL(fileURLWithPath: "/bin/zsh")
 
-        // Prepare a script to activate the virtual environment, run Whisper, and transcribe
-        
-        /*
+        // Update the Whisper script to output to the known file path
         let script = """
-        source /path/to/venv/bin/activate
-        whisper '\(audioURL.path)' --language sv --output_format txt --output_dir /path/to/output
-        """
-         */
-        
-        let script = """
-        whisper '\(audioURL.path)' --language sv --output_format txt --output_dir /path/to/output
+        whisper '\(audioURL.path)' --language sv --output_format txt --output_dir '\(outputDirectory.path)'
         """
 
         task.arguments = ["-c", script]
 
-        // Capture the output
+        // Capture errors from Whisper, if any
         let pipe = Pipe()
         task.standardOutput = pipe
         task.standardError = pipe
 
         task.terminationHandler = { _ in
-            let data = pipe.fileHandleForReading.readDataToEndOfFile()
-            let output = String(data: data, encoding: .utf8) ?? ""
+            // Read the transcription output file
             DispatchQueue.main.async {
+                do {
+                    let transcriptionOutput = try String(contentsOf: outputFilePath, encoding: .utf8)
+                    self.transcriptionText = transcriptionOutput
+                    self.statusMessage = "Transcription complete."
+                } catch {
+                    self.statusMessage = "Error reading transcription output: \(error.localizedDescription)"
+                }
                 self.isProcessing = false
-                self.transcriptionText = output
-                self.statusMessage = "Transcription complete."
             }
         }
 
         do {
             try task.run()
         } catch {
-            statusMessage = "Error: \(error.localizedDescription)"
+            statusMessage = "Error running Whisper: \(error.localizedDescription)"
             isProcessing = false
         }
     }
-
     
     /*
     // Request authorization for speech recognition
