@@ -83,8 +83,15 @@ struct ContentView: View {
         task.executableURL = URL(fileURLWithPath: "/bin/zsh")
 
         // Prepare a script to activate the virtual environment, run Whisper, and transcribe
+        
+        /*
         let script = """
         source /path/to/venv/bin/activate
+        whisper '\(audioURL.path)' --language sv --output_format txt --output_dir /path/to/output
+        """
+         */
+        
+        let script = """
         whisper '\(audioURL.path)' --language sv --output_format txt --output_dir /path/to/output
         """
 
