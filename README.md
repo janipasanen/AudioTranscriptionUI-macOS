@@ -25,7 +25,7 @@ A macOS application that allows users to transcribe audio files (in `.m4a` forma
 
 ```
 git clone https://github.com/janipasanen/AudioTranscriptionUI-macOS.git
-cd audio-transcription-ap
+cd AudioTranscriptionUI-macOS
 ```
 
 2. Install Whisper
