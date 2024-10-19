@@ -108,7 +108,7 @@ struct ContentView: View {
 
         // Update the Whisper script to specify the output directory and format
         let script = """
-        /opt/homebrew/opt/coreutils/libexec/gnubin/stdbuf -oL /opt/anaconda3/bin/whisper '\(audioURL.path)' --language sv --output_format txt --output_dir '\(outputDirectory.path)'
+        /usr/local/bin/stdbuf -oL /opt/anaconda3/bin/whisper '\(audioURL.path)' --language sv --output_format txt --output_dir '\(outputDirectory.path)'
         """
 
         task.arguments = ["-c", script]
