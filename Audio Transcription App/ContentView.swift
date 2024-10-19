@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var transcriptionText: String = ""
     @State private var statusMessage: String = "Select an M4A file to transcribe"
     @State private var isProcessing: Bool = false
+    @State private var isCopyButtonDisabled: Bool = true
 
     var body: some View {
         VStack(spacing: 20) {
@@ -59,6 +60,7 @@ struct ContentView: View {
             Button(action: copyToClipboard) {
                 Text("Copy to Clipboard")
             }
+            .disabled(isCopyButtonDisabled || isProcessing)
 
             Spacer()
         }
@@ -88,6 +90,7 @@ struct ContentView: View {
         
         guard let audioURL = selectedFileURL else { return }
         isProcessing = true
+        isCopyButtonDisabled = true
         statusMessage = "Transcribing audio..."
 
         // Set a path for the transcription output file (use same name as the audio file)
@@ -105,43 +108,61 @@ struct ContentView: View {
 
         // Update the Whisper script to specify the output directory and format
         let script = """
-        /opt/anaconda3/bin/whisper '\(audioURL.path)' --language sv --output_format txt --output_dir '\(outputDirectory.path)'
+        /opt/homebrew/opt/coreutils/libexec/gnubin/stdbuf -oL /opt/anaconda3/bin/whisper '\(audioURL.path)' --language sv --output_format txt --output_dir '\(outputDirectory.path)'
         """
 
         task.arguments = ["-c", script]
 
-        // Capture output and errors from Whisper continuously
-        let pipe = Pipe()
-        task.standardOutput = pipe
-        task.standardError = pipe
+        // Capture both stdout and stderr outputs from Whisper
+        let stdoutPipe = Pipe()
+        //let stderrPipe = Pipe()
+        task.standardOutput = stdoutPipe
+        //task.standardError = stderrPipe
+        task.standardError = stdoutPipe  // Redirect stderr to the same pipe
 
-        // Set up continuous output reading
-        let fileHandle = pipe.fileHandleForReading
-        let outputSource = DispatchSource.makeReadSource(fileDescriptor: fileHandle.fileDescriptor, queue: DispatchQueue.global())
-        
-        outputSource.setEventHandler {
-            let outputData = fileHandle.availableData
-            if !outputData.isEmpty {
-                if let output = String(data: outputData, encoding: .utf8) {
-                    DispatchQueue.main.async {
-                        self.whisperOutputText += output
+        // Function to read pipe data continuously
+        func readPipe(pipe: Pipe, appendTo outputField: @escaping (String) -> Void) {
+            let fileHandle = pipe.fileHandleForReading
+            let outputSource = DispatchSource.makeReadSource(fileDescriptor: fileHandle.fileDescriptor, queue: DispatchQueue.global())
+
+            outputSource.setEventHandler {
+                let outputData = fileHandle.availableData
+                if !outputData.isEmpty {
+                    if let output = String(data: outputData, encoding: .utf8) {
+                        DispatchQueue.main.async {
+                            outputField(output)
+                        }
                     }
+                } else {
+                    outputSource.cancel()
                 }
-            } else {
-                outputSource.cancel()
             }
+
+            outputSource.setCancelHandler {
+                fileHandle.closeFile()
+            }
+
+            outputSource.resume()
         }
 
-        outputSource.setCancelHandler {
-            fileHandle.closeFile()
+        // Continuously read stdout and append to whisperOutputText
+        readPipe(pipe: stdoutPipe) { output in
+            self.whisperOutputText += output
         }
 
-        outputSource.resume()
+        // Continuously read stderr and append to whisperOutputText
+       /*
+        readPipe(pipe: stderrPipe) { output in
+            self.whisperOutputText += output
+        }
+         */
 
         task.terminationHandler = { _ in
             DispatchQueue.main.async {
                 // Check if transcription file exists
                 if FileManager.default.fileExists(atPath: outputFilePath.path) {
+                    isCopyButtonDisabled = false
+                    
                     do {
                         let transcription = try String(contentsOf: outputFilePath, encoding: .utf8)
                         self.transcriptionText = transcription
@@ -161,6 +182,7 @@ struct ContentView: View {
         } catch {
             statusMessage = "Error running Whisper: \(error.localizedDescription)"
             isProcessing = false
+            isCopyButtonDisabled = true
         }
     }
 

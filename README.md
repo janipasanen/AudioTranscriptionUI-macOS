@@ -39,12 +39,12 @@ conda install -c conda-forge whisper
 Make sure whisper and ffmpeg are accessible in your system’s PATH.
 
 
-3. Install FFmpeg
+3. Install FFmpeg and coreutils
 
-You can install FFmpeg via Homebrew:
+You can install FFmpeg and coreutils via Homebrew:
 
 ```
-brew install ffmpeg
+brew install ffmpeg coreutils
 
 ```
 
