@@ -55,7 +55,7 @@ class TranscriptionManager: ObservableObject {
         task.environment?["PATH"] = "/usr/local/bin:/opt/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
         let script = """
-        /opt/anaconda3/bin/whisper '\(audioURL.path)' --language sv --output_format txt --output_dir '\(outputDirectory.path)'
+        /opt/anaconda3/bin/whisper '\(audioURL.path)' --verbose true --fp16 false --language sv --output_format txt --output_dir '\(outputDirectory.path)'
         """
 
         task.arguments = ["-c", script]
