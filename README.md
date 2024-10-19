@@ -24,7 +24,7 @@ A macOS application that allows users to transcribe audio files (in `.m4a` forma
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/yourusername/audio-transcription-app.git
+git clone https://github.com/janipasanen/AudioTranscriptionUI-macOS.git
 cd audio-transcription-ap
 ```
 
