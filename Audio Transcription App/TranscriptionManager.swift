@@ -65,15 +65,33 @@ class TranscriptionManager: ObservableObject {
         task.standardOutput = pipe
         task.standardError = pipe
 
+        // Set up continuous output reading using DispatchSource
+        let fileHandle = pipe.fileHandleForReading
+        let outputSource = DispatchSource.makeReadSource(fileDescriptor: fileHandle.fileDescriptor, queue: DispatchQueue.global())
+
+        outputSource.setEventHandler { [weak self] in
+            guard let self = self else { return }
+            let outputData = fileHandle.availableData
+            if !outputData.isEmpty {
+                if let output = String(data: outputData, encoding: .utf8) {
+                    DispatchQueue.main.async {
+                        self.whisperOutputText += output
+                    }
+                }
+            } else {
+                outputSource.cancel() // Stop reading when there's no more data
+            }
+        }
+
+        outputSource.setCancelHandler {
+            fileHandle.closeFile() // Close the file handle when done
+        }
+
+        outputSource.resume() // Start reading
+
         task.terminationHandler = { [weak self] _ in
             guard let self = self else { return }
-            let data = pipe.fileHandleForReading.readDataToEndOfFile()
-            let output = String(data: data, encoding: .utf8) ?? ""
-
             DispatchQueue.main.async {
-                // Display Whisper output continuously
-                self.whisperOutputText = output
-
                 // Check if transcription file exists
                 if FileManager.default.fileExists(atPath: outputFilePath.path) {
                     self.isCopyButtonDisabled = false
